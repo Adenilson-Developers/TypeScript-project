@@ -1,0 +1,23 @@
+{
+  "name": "typescript-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adenilson-Developers/TypeScript-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adenilson-Developers/TypeScript-project/issues"
+  },
+  "homepage": "https://github.com/Adenilson-Developers/TypeScript-project#readme",
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  }
+}
