@@ -1,15 +1,16 @@
 class Negociacao {
 
-   private _data;
-   private _quantidade;
-   private _valor;
+//    private _data: Date;
+//    private _quantidade: number;
+//    private _valor: number;
     
-    constructor(data, quantidade, valor){
-        this._data = data;
-        this._quantidade = quantidade;
-        this._valor = valor;
+    constructor( private _data: Date, private _quantidade: number, private _valor: number){
+        // this._data = data;
+        // this._quantidade = quantidade;
+        // this._valor = valor;
 
     }
+    
 // Regras: uma negociação depois que criado não pode ter suas propriedades alteradas
 // o "_" indica uma conversão no javascript que diz que as essas propriedades não pode ser alterada
 // fora dos métodos da propria classe
