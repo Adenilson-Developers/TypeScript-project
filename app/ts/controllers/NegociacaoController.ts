@@ -11,7 +11,7 @@ class NegociacaoControler {
         this._inputData = <HTMLInputElement>document.querySelector('#data');
         this._inputQuantidade = <HTMLInputElement>document.querySelector('#quantidade');
         this._inputValor = <HTMLInputElement>document.querySelector('#valor');
-        this._negociacoesView.update()
+        this._negociacoesView.update(this._negociacoes);
     }
 
     adicionar(event: Event){
@@ -25,7 +25,9 @@ class NegociacaoControler {
         );
         this._negociacoes.adicionar(negociacao);
 
-        this._negociacoes.paraArray().length = 0
+        this._negociacoesView.update(this._negociacoes);
+
+        // this._negociacoes.paraArray().length = 0
 
         this._negociacoes.paraArray().forEach(negociacao => {
             console.log(negociacao.data);
