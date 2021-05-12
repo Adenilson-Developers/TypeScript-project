@@ -30,6 +30,5 @@ class Negociacao {
     get volume(){
         return this._quantidade * this._valor;
     }
-
     // Esses methodos que permite acessar os valores.
 }
