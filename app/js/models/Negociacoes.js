@@ -9,4 +9,3 @@ class Negociacoes {
         return [].concat(this._negociacoes);
     }
 }
-//  o array espera um tipo de dados, tipo de dados <Negociacao> 
