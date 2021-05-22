@@ -1,17 +1,17 @@
-System.register(["../views/NegociacoesView", "../models/Negociacoes", "../views/MensagemView", "../models/negociacao"], function (exports_1, context_1) {
+System.register(["../views/NegociacoesView", "../views/MensagemView", "../models/Negociacoes", "../models/negociacao"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var NegociacoesView_1, Negociacoes_1, MensagemView_1, negociacao_1, NegociacaoController;
+    var NegociacoesView_1, MensagemView_1, Negociacoes_1, negociacao_1, NegociacaoController;
     return {
         setters: [
             function (NegociacoesView_1_1) {
                 NegociacoesView_1 = NegociacoesView_1_1;
             },
-            function (Negociacoes_1_1) {
-                Negociacoes_1 = Negociacoes_1_1;
-            },
             function (MensagemView_1_1) {
                 MensagemView_1 = MensagemView_1_1;
+            },
+            function (Negociacoes_1_1) {
+                Negociacoes_1 = Negociacoes_1_1;
             },
             function (negociacao_1_1) {
                 negociacao_1 = negociacao_1_1;
