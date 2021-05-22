@@ -8,6 +8,6 @@
         "module": "System"
     },
     "include": [
-        "app/ts/**/*"
+        "app/ts/**/*" 
     ]
 }
