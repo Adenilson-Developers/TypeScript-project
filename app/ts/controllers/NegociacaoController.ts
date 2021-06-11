@@ -2,6 +2,7 @@ import { NegociacoesView } from '../views/NegociacoesView';
 import { MensagemView } from '../views/MensagemView';
 import { Negociacoes } from '../models/Negociacoes';
 import { Negociacao } from '../models/negociacao';
+import { logarTempoDeExecucao } from '../helpers/decorators/index';
 
 export class NegociacaoController {
 
@@ -20,8 +21,10 @@ export class NegociacaoController {
         this._negociacoesView.update(this._negociacoes);
     }
 
+    @logarTempoDeExecucao()
     adicionar(event: Event){
         
+        //const t1 = performance.now();
 
         event.preventDefault();
 
@@ -41,7 +44,11 @@ export class NegociacaoController {
 
         this._negociacoesView.update(this._negociacoes);
 
-        this._mensagemView.update('Negociação adicionada com sucesso!')
+        this._mensagemView.update('Negociação adicionada com sucesso!');
+
+        const t2 = performance.now();
+
+        //console.log(`O tempo de execução da adiciona é: ${ t2 - t1 } ms `);
 
 
         // this._negociacoes.paraArray().length = 0
@@ -52,6 +59,7 @@ export class NegociacaoController {
             console.log(negociacao.valor);
         });
         
+       
     }
 }
 
