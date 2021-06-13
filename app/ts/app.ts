@@ -7,6 +7,7 @@ import { NegociacaoController } from './controllers/NegociacaoController';
 // adicionando JQuery
  const controller = new NegociacaoController();
 $('.form').submit(controller.adicionar.bind(controller));
+$('#botao-importa').click(controller.importaDados.bind(controller));
 // document
 //     .querySelector('.form')      
 //     .addEventListener('submit', controller.adicionar.bind(controller));
