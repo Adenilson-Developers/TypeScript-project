@@ -31,4 +31,17 @@ export class Negociacao {
         return this._quantidade * this._valor;
     }
     // Esses methodos que permite acessar os valores.
+
+    paraTexto(): void{
+        console.log("Impressão")
+        console.log(
+            `Data: ${this.data},
+            Quantidade: ${this.quantidade},
+            Valor: ${this.valor},
+            volume: ${this.volume}
+            `
+        );
+    }
 }
+
+

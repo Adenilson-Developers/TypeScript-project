@@ -5,6 +5,7 @@ import { Negociacao } from '../models/negociacao';
 import { domInject } from '../helpers/decorators/domInject';
 import { throttle } from '../helpers/decorators/throttle';
 import { NegociacaoService } from '../services/NegociacaoService';
+import { imprime } from '../helpers/intex';
 
 // import { logarTempoDeExecucao } from '../helpers/decorators/index';
 
@@ -47,7 +48,11 @@ export class NegociacaoController {
             parseInt(this._inputQuantidade.val()),
             parseFloat(this._inputValor.val())
         );
+
+        
         this._negociacoes.adicionar(negociacao);
+
+        imprime(negociacao, this._negociacoes);
 
         this._negociacoesView.update(this._negociacoes);
 
@@ -72,17 +77,16 @@ export class NegociacaoController {
 
     @throttle()
     importaDados(){
-        function isOk(res: Response){
-            if(res.ok){
-                return res;
-            }else{
-                throw new Error(res.statusText);
-            }
-
-        }
-
         this._service
-            .obterNegociacoes(isOk)
+            .obterNegociacoes( res => {
+
+                if(res.ok){
+                    return res;
+                }else{
+                    throw new Error(res.statusText);
+                }
+
+            })
             .then(negociacoes => {
                 negociacoes.forEach(negociacao => 
                     this._negociacoes.adicionar(negociacao))

@@ -23,6 +23,14 @@ System.register([], function (exports_1, context_1) {
                 get volume() {
                     return this._quantidade * this._valor;
                 }
+                paraTexto() {
+                    console.log("Impressão");
+                    console.log(`Data: ${this.data},
+            Quantidade: ${this.quantidade},
+            Valor: ${this.valor},
+            volume: ${this.volume}
+            `);
+                }
             };
             exports_1("Negociacao", Negociacao);
         }
