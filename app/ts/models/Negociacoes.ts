@@ -1,6 +1,7 @@
+import { Imprimivel } from './Imprimivel';
 import { Negociacao } from './negociacao';
 
- export class Negociacoes {
+ export class Negociacoes implements Imprimivel {
     private _negociacoes: Array<Negociacao> = [];
 
     adicionar(negociacao: Negociacao): void {

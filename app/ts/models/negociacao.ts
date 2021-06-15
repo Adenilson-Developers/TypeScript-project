@@ -1,4 +1,6 @@
-export class Negociacao {
+import { Imprimivel } from "./Imprimivel";
+
+export class Negociacao implements Imprimivel {
 
 //    private _data: Date;
 //    private _quantidade: number;
@@ -8,7 +10,6 @@ export class Negociacao {
         // this._data = data;
         // this._quantidade = quantidade;
         // this._valor = valor;
-
     }
     
 // Regras: uma negociação depois que criado não pode ter suas propriedades alteradas
