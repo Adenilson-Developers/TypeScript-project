@@ -1,7 +1,6 @@
-import { Igualavel } from "./Igualavel";
-import { Imprimivel } from "./Imprimivel";
+import { MeuObjeto } from "./MeuObjeto";
 
-export class Negociacao implements Imprimivel, Igualavel<Negociacao> {
+export class Negociacao implements MeuObjeto<Negociacao> {
 
 //    private _data: Date;
 //    private _quantidade: number;
@@ -52,5 +51,11 @@ export class Negociacao implements Imprimivel, Igualavel<Negociacao> {
             && this.data.getFullYear() == negociacao.data.getFullYear();
     }
 }
+
+
+
+
+
+
 
 
